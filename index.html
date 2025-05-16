@@ -25,11 +25,11 @@
           <button class="btn-clear" type="reset">Clear All</button>
         </header>
 
-        <form class="calculator-form">
+        <form class="calculator-form" autocomplete="off">
           <div class="form-group">
             <p class="form-label">Mortgage Amount</p>
             <div class="form-input-wrapper form-input-amount">
-              <input type="text" id="amount" name="amount" inputmode="numeric" pattern="[0-9]*" class="input-amount">
+              <input type="text" id="amount" name="amount" inputmode="numeric" class="input-amount">
             </div>
             <p class="amount-msg form-error">This field is required</p>
           </div>
@@ -37,7 +37,7 @@
           <div class="form-group">
             <p class="form-label">Mortgage Term</p>
             <div class="form-input-wrapper form-input-term">
-              <input type="text" id="term" name="term" inputmode="numeric" pattern="[0-9]*" class="input-term">
+              <input type="text" id="term" name="term" inputmode="numeric" class="input-term">
             </div>
             <p class="term-msg form-error">This field is required</p>
           </div>
@@ -45,7 +45,7 @@
           <div class="form-group">
             <p class="form-label">Interest Rate</p>
             <div class="form-input-wrapper form-input-rate">
-              <input type="text" id="rate" name="rate" inputmode="numeric" pattern="[0-9]*" class="input-rate">
+              <input type="text" id="rate" name="rate" inputmode="numeric" class="input-rate">
             </div>
             <p class="rate-msg form-error">This field is required</p>
           </div>
@@ -53,13 +53,13 @@
           <div class="form-group">
             <p class="form-label">Mortgage Type</p>
             <div class="form-radio-group">
-              <label for="repayment" class="form-radio active">
+              <label class="form-radio">
                 <input type="radio" id="repayment" name="mortgage" value="repayment">
                 <span class="custom-radio"></span>
                 <span class="label-radio">Repayment</span>
               </label>
 
-              <label for="interest" class="form-radio">
+              <label class="form-radio">
                 <input type="radio" id="interest" name="mortgage" value="interest">
                 <span class="custom-radio"></span>
                 <span class="label-radio">Interest Only</span>
@@ -88,10 +88,10 @@
               results, edit the form and click “calculate repayments” again.</p>
             <div class="results-summary">
               <p class="results-label">Your monthly repayments</p>
-              <h3 class="results-amount">£1,797.74</h3>
+              <h3 class="results-amount">-</h3>
               <span class="results-divider"></span>
               <p class="results-label">Total you'll repay over the term</p>
-              <h4 class="results-total">£539,322.94</h4>
+              <h4 class="results-total">-</h4>
             </div>
           </div>
           <!-- Completed results end -->
@@ -106,6 +106,8 @@
       Coded by <a href="https://github.com/arisdwii">arisdwii</a>.
     </p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
